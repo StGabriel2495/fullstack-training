@@ -74,14 +74,14 @@ sequenceDiagram
 ## 0.6 : Nouvelle note
 
 ```mermaid
-sequenceDiagram 0.6 : Nouvelle note
+sequenceDiagram
   participant browser
   participant server
 
   browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
   activate server
   server-->>browser: {content: "Gabriel test SPA", date: "2025-09-18T15:19:35.044Z"}
-  desactivate server
+  deactivate server
 
-  Note from server: The note have been created {message: "note created"}
+  Note over server: The note have been created {message: "note created"}
 ```
